@@ -9,6 +9,11 @@ namespace MyClinic.DAL.Models
 {
     public class User:IdentityUser
     {
-
+        public string FirstName { get; set; }
+        public string SecondName { get; set; }
+        public string LastName { get; set; }
+        public string Phone { get; set; }
+        public string Specialty { get; set; }
+        public double Rating { get; set; } 
     }
 }

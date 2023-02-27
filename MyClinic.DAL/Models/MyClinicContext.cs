@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace MyClinic;
+namespace MyClinic.DAL.Models;
 
-public partial class MyClinicContext : DbContext
+public partial class MyClinicContext : IdentityDbContext<User, IdentityRole, string>
 {
     public MyClinicContext()
     {
@@ -36,6 +38,7 @@ public partial class MyClinicContext : DbContext
         });
 
         OnModelCreatingPartial(modelBuilder);
+        base.OnModelCreating(modelBuilder);
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
