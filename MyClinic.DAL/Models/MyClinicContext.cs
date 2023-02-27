@@ -25,16 +25,19 @@ public partial class MyClinicContext : IdentityDbContext<User, IdentityRole, str
     {
         modelBuilder.Entity<Appointment>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("Appointment");
+            entity.ToTable("Appointment");
 
             entity.Property(e => e.Date).HasColumnType("datetime");
             entity.Property(e => e.Doctor).HasMaxLength(450);
-            entity.Property(e => e.Id).HasMaxLength(450);
-            entity.Property(e => e.Patient)
-                .HasMaxLength(450)
-                .IsFixedLength();
+            entity.Property(e => e.Patient).HasMaxLength(450);
+
+            entity.HasOne(d => d.DoctorNavigation).WithMany(p => p.AppointmentDoctorNavigations)
+                .HasForeignKey(d => d.Doctor)
+                .HasConstraintName("FK_Appointment_AspNetUsers");
+
+            entity.HasOne(d => d.PatientNavigation).WithMany(p => p.AppointmentPatientNavigations)
+                .HasForeignKey(d => d.Patient)
+                .HasConstraintName("FK_Appointment_AspNetUsers1");
         });
 
         OnModelCreatingPartial(modelBuilder);

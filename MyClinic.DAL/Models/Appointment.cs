@@ -14,4 +14,8 @@ public partial class Appointment
     public int? Cabinet { get; set; }
 
     public DateTime Date { get; set; }
+
+    public virtual User? DoctorNavigation { get; set; }
+
+    public virtual User? PatientNavigation { get; set; }
 }

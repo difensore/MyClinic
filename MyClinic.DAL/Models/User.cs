@@ -14,6 +14,8 @@ namespace MyClinic.DAL.Models
         public string LastName { get; set; }
         public string Phone { get; set; }
         public string Specialty { get; set; }
-        public double Rating { get; set; } 
+        public double Rating { get; set; }
+        public virtual ICollection<Appointment> AppointmentDoctorNavigations { get; } = new List<Appointment>();
+        public virtual ICollection<Appointment> AppointmentPatientNavigations { get; } = new List<Appointment>();
     }
 }
