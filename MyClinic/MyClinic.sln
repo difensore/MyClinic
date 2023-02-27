@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyClinic", "MyClinic.csproj", "{DF62E20D-88AC-4F8C-933F-5378BFE5ADDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyClinic", "MyClinic.csproj", "{DF62E20D-88AC-4F8C-933F-5378BFE5ADDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyClinic.DAL", "..\MyClinic.DAL\MyClinic.DAL.csproj", "{BB1C47F6-394D-4954-88AB-00FEF5C66385}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DF62E20D-88AC-4F8C-933F-5378BFE5ADDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF62E20D-88AC-4F8C-933F-5378BFE5ADDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF62E20D-88AC-4F8C-933F-5378BFE5ADDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB1C47F6-394D-4954-88AB-00FEF5C66385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB1C47F6-394D-4954-88AB-00FEF5C66385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB1C47F6-394D-4954-88AB-00FEF5C66385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB1C47F6-394D-4954-88AB-00FEF5C66385}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
