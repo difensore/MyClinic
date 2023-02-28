@@ -16,9 +16,10 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(opts => {
     .AddEntityFrameworkStores<MyClinicContext>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors();
 
 var app = builder.Build();
-
+app.UseCors(builder => builder.AllowAnyOrigin());
 
 if (app.Environment.IsDevelopment())
 {
