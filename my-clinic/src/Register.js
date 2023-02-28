@@ -1,8 +1,9 @@
 import React, {useState,setState} from 'react';
-import './App.css'
+import './Register.css'
 function RegistrationForm() {
     
     const [firstName, setFirstName] = useState(null);
+    const [secondName, setSecondName] = useState(null);
     const [lastName, setLastName] = useState(null);
     const [email, setEmail] = useState(null);
     const [password,setPassword] = useState(null);
@@ -12,6 +13,9 @@ function RegistrationForm() {
         const {id , value} = e.target;
         if(id === "firstName"){
             setFirstName(value);
+        }
+        if(id === "secondName"){
+            setSecondName(value);
         }
         if(id === "lastName"){
             setLastName(value);
@@ -39,9 +43,13 @@ function RegistrationForm() {
                     <label className="form__label" for="firstName">First Name </label>
                     <input className="form__input" type="text" value={firstName} onChange = {(e) => handleInputChange(e)} id="firstName" placeholder="First Name"/>
                 </div>
+                <div className="secondname">
+                    <label className="form__label" for="secondName">First Name </label>
+                    <input className="form__input" type="text" value={secondName} onChange = {(e) => handleInputChange(e)} id="secondName" placeholder="Second Name"/>
+                </div>
                 <div className="lastname">
                     <label className="form__label" for="lastName">Last Name </label>
-                    <input  type="text" name="" id="lastName" value={lastName}  className="form__input" onChange = {(e) => handleInputChange(e)} placeholder="LastName"/>
+                    <input  type="text" name="" id="lastName" value={lastName}  className="form__input" onChange = {(e) => handleInputChange(e)} placeholder="Last Name"/>
                 </div>
                 <div className="email">
                     <label className="form__label" for="email">Email </label>
