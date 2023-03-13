@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 function Header() {
     return(
         <nav class="bg-dark navbar-dark navbar">
-            <div className="row col-12 d-flex justify-content-center text-white">
-                <h3>Registration</h3>
-            </div>
+            <ul>
+          <li class="navbar-brand">Головна</li>          
+          <li class="navbar-brand">Послуги</li>
+        </ul>
         </nav>
     )
 }
